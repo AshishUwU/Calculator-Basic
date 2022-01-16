@@ -7,8 +7,7 @@ using namespace std;
 
 int main()
 { 
-    cout<<"****CALCULATOR PROGRAM BY Coder ARP****\n";
-    cout<<"Working for new features and Guide!!\n";
+   
     double x;
     double y,d;
     string name,txt;
@@ -34,7 +33,7 @@ int main()
        saveFile << textToSave;
 
        saveFile.close();
-       cout<<"Please Restart the Calculator for changes to take place";
+       cout<<"That's awesome! Please Restart the Calculator for changes to take place";
        cin>>z;
         return 0;
     } else {
@@ -42,7 +41,7 @@ int main()
         cout << name <<"\n";
     
     };
-    file.open("Recording.mp4");
+    file.open("Recording.mp3");
     cout<<name<<", "<<"Please Enter Operator--> ";
     cin>>op;
     switch (op)
@@ -129,6 +128,7 @@ int main()
              if (y == 0)
          {
          cout<<name<<", "<<"ERROR: DIVISION BY 0 IS INVALID!!";
+         cin>>es;
          break;
          }
             if(!cin.fail())
@@ -172,6 +172,8 @@ int main()
              }
             if(!cin.fail())
              cout<<"Square Root is--> "<<sqrt(x);
+             cin>>es;
+             return 1; 
          }
          break;
 
@@ -190,6 +192,8 @@ int main()
              }
             if(!cin.fail())
              cout<<"Cube Root is--> "<<cbrt(x);
+             cin>>es;
+             return 1;
          }
          break;
 
@@ -237,16 +241,21 @@ int main()
          cout<<"Total Amount is--> "<<((x*y*d)/100)+x<<"\n";
          break;
         case 'h':
-         cout<<name<<", "<<"Help Guide---->";
-         cout<<"+ for addition others under construction";
+         cout<<name<<", "<<"Help Guide---->\n";
+         cout<<"+ for addition\n";
+         cout<<"- for substraction\n";
+         cout<<"* for multiplication\n";
+         cout<<"/ for divsion\n";
+         cout<<"s for square root\n";
+         cout<<"c for cube root\n";
+         cout<<"t for tables of numbers";
+         cout<<"$ to conver INR to DOLLARS\n";
+         cout<<"e for exponents\n";
+         cout<<"% for percentage\n";
+         cin>>es;
          break;
     }
     }
     }
-    }
-   
-    cout<<"\n";              
-    cout<<"Click x on top right corner of window to exit this calculator. To start a new calculation start calculator again\n";
-    cin>>es;
-    return 0;
-} 
+}
+}
